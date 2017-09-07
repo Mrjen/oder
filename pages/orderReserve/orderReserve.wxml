@@ -1,0 +1,10 @@
+<!--pages/orderReserve/orderReserve.wxml-->
+<view class="top_nav">
+   <navigator url="../Order/Order"  bindtap="toOrder" hover-class="none">点餐</navigator>
+   <navigator url="../orderReserve/orderReserve" hover-class="none">预约</navigator>
+</view>
+
+<image class="logo" src="../img/logo.png"></image>
+
+<view class="order_btn" bindtap="callShop">电话预定</view>
+<view class="order_btn" bindtap="onlineOrder">线上预定</view>

@@ -1,0 +1,54 @@
+/* pages/shopDetail/shopDetail.wxss */
+.list_item{
+  display: flex;
+  justify-content: space-between;
+}
+
+.list_item .item_in{
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.list_item image{
+   display: block;
+   width: 80rpx;
+   height: 80rpx;
+   margin-right: 30rpx;
+}
+
+.list_item{
+  padding:10rpx 30rpx;
+}
+
+.call_shop{
+  display: inline-block;
+  width: 180rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  color: #fff;
+  background: #ff2f65;
+  border-radius: 8rpx;
+}
+
+
+.map{
+  width: 100%;
+  height: 400rpx;
+}
+
+.work_time{
+  width: 100%;
+  padding:0 40rpx;
+  display: flex;
+  align-items: center;
+}
+
+.work_time image{
+  display: block;
+  width: 50rpx;
+  height:50rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}

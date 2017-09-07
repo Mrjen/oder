@@ -1,0 +1,133 @@
+/* pages/shopCart/shopCart.wxss */
+.top_nav{
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 30rpx;
+  position: relative;
+}
+
+.edit_list{
+  width: 140rpx;
+  height: 88rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 88rpx;
+  text-align: center;
+}
+
+.opations{
+  display: flex;
+  justify-content: space-between;
+  padding:20rpx 20rpx;
+  align-items: center;
+}
+
+.delete_btn{
+  width: 180rpx;
+  height: 78rpx;
+  text-align: center;
+  line-height: 78rpx;
+  color: #fff;
+  background:#c90000;
+  border-radius: 8rpx;
+}
+
+.shop_img{
+  width: 120rpx;
+  height: 120rpx;
+  margin:0 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop_img image{
+  width: 120rpx;
+  max-height: 100%;
+}
+
+.shop_right{
+  display: flex;
+  flex: 1;
+}
+
+.shop_list{
+  display: flex;
+  align-items: center;
+  padding:20rpx;
+  position: relative;
+}
+
+.info_box{
+  flex:1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info_right{
+  display: flex;
+  align-items: center;
+}
+
+.info_right input{
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  box-sizing: border-box;
+}
+
+.info_right view:nth-of-type(1){
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 6rpx 0 0 6rpx;
+  border:1px solid #333;
+  text-align: center;
+  line-height: 50rpx;
+}
+
+.info_right view:nth-of-type(2){
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 0 6rpx 6rpx 0;
+  border:1px solid #333;
+  text-align: center;
+  line-height: 50rpx;
+}
+
+.info_left .title{
+   font-size: 30rpx;
+   margin-bottom: 24rpx;
+}
+
+.select_box{
+  display: flex;
+  align-items: center;
+}
+
+/*购物车*/
+.shop_cart{
+  width: 100%;
+  height: 104rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding:0 20rpx;
+}
+
+.settlement text{
+  display: inline-block;
+  padding:10rpx 20rpx;
+  color: #fff;
+  background: #c90000;
+  border-radius: 6rpx;
+}

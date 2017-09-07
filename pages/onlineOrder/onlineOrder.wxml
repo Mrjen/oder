@@ -1,0 +1,12 @@
+<!--pages/onlineOrder/onlineOrder.wxml-->
+<view class="container">
+    <input class="input_item" type="text" placeholder="就餐时间"/>
+    <input class="input_item" type="number" placeholder="就餐人数"/>
+    <input class="input_item" type="text" placeholder="是否需要包间"/>
+    <input class="input_item" type="text" placeholder="联系人"/>
+    <input class="input_item" type="number" placeholder="联系电话"/>
+
+    <textarea class="text_tip" bindblur="bindTextAreaBlur"  placeholder="备注" />
+
+    <view class="sure_btn">确认</view>
+</view>

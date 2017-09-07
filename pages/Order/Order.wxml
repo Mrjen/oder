@@ -1,0 +1,62 @@
+<!--pages/Order/Order.wxml-->
+<view class="top_nav">
+   <navigator url="../orderReserve/orderReserve" hover-class="none">点餐</navigator>
+   <navigator url="../orderReserve/orderReserve" hover-class="none">预约</navigator>
+</view>
+
+<!-- 水平导航 -->
+<scroll-view class="nav_box" scroll-x="true">
+  <view class="scroll_box border_bottom" style="width:{{navWidth}}rpx">
+       <view bindtap="changeNav" data-idx="{{index}}" class="nav_item {{item.active?'nav_active':''}}" wx:for="{{dishType}}">{{item.text}}</view>
+   </view>
+</scroll-view>
+
+<!-- 菜品列表 -->
+<view class="dish_list">
+   <view class="dish_item border_bottom" wx:for="{{dishList}}">
+      <view class="dish_img"><image src="{{item.img}}" mode="widthFix"></image></view>
+      <view class="dish_right">
+         <view class="dish_title">{{item.title}}</view>
+        <view class="info_box">
+          <view class="info_left">
+            <view class="dish_price">￥{{item.price}}</view>
+            <view class="dish_sales">销量：{{item.sales}}</view>
+          </view>
+          <view class="buy_icon"  bindtap="addShopCart" data-idx="{{index}}"><image src="../img/add_shopcar.png"></image></view>
+        </view>
+      </view>
+   </view>
+</view>
+
+
+<!-- 加入购物车 -->
+<view class="shop_car_box" wx:if="{{shopCart}}" catchtap="closeCar">
+<view class="car_box border_top">
+   <view class="shop_box border_bottom">
+     <view class="shop_left">
+       <image src="{{currentList.img}}"></image>
+       <view class="shop_info">
+          <view>{{currentList.title}}</view>
+          <view>￥{{currentList.price}}</view>
+       </view>
+     </view>
+     <view class="close_car" catchtap="closeCar"><text></text></view>
+   </view>
+   <view class="count_box">
+      <view>数量：</view>
+      <view  class="info_right">
+        <view bindtap="cutShop" data-idx="{{index}}" data-price="{{currentList.price}}" data-count="{{currentList.count}}">-</view>
+        <input value="{{currentList.count}}" disable="true" type="number"/>
+        <view bindtap="addShop" data-idx="{{index}}"  data-price="{{currentList.price}}" data-count="{{currentList.count}}">+</view>
+      </view>
+   </view>
+   <view class="add_to_shopcart">加入购物车</view>
+</view>
+</view>
+
+<!-- 小功能 -->
+<view class="page_opation">
+   <button open-type="contact"><image src="../img/order_icon_kefu.png"></image></button>
+   <navigator url="../OrderList/OrderList"><image src="../img/order_icon_order.png"></image></navigator>
+   <navigator url="../shopCart/shopCart"><image src="../img/order_icon_shopcart.png"></image></navigator>
+</view>

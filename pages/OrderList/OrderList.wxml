@@ -1,0 +1,23 @@
+<!--pages/OrderList/OrderList.wxml-->
+<view class="top_nav border_bottom">
+   <view wx:for="{{topNav}}" bindtap="changeNav" data-idx="{{index}}" class="nav_item {{item.active?'nav_active':''}}">{{item.text}}</view>
+</view>
+<!-- 内容 -->
+<view class="content">
+    <view class="list_item" wx:for="{{list}}" wx:key="id">
+        <view class="item_nav border_bottom">
+           <view>{{item.time}}</view>
+           <view>{{item.statusText}}</view>
+        </view>
+        <view class="dish_list border_bottom" wx:for="{{item.shop}}" wx:for-item="shop"  wx:key="id">
+            <view class="img_box"><image src="{{shop.img}}"></image></view>
+            <view class="list_right">
+                <view class="title">{{shop.title}}</view>
+                <view class="detail">
+                    <view>￥{{shop.price}}</view>
+                    <view>x{{shop.count}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/Mine/Mine.wxml-->
+<view class="info_box">
+    <image src="{{avatarUrl}}"></image>
+    <text>{{nickName}}</text>
+</view>
+
+<view class="list">
+   <navigator wx:for="{{list}}" url="{{item.url}}" class="list_item border_bottom" hover-class="none">
+      <view class="list_left">
+        <image src="{{item.icon}}"></image>
+        {{item.text}}
+      </view>
+      <view class="right_icon"></view>
+   </navigator>
+</view>

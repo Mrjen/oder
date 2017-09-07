@@ -1,0 +1,9 @@
+/* pages/Notice/Notice.wxss */
+text{
+  color: #999;
+  display: block;
+  width: 100%;
+  line-height: 500rpx;
+  text-align: center;
+  font-size: 30rpx;
+}

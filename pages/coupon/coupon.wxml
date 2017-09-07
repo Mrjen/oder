@@ -1,0 +1,25 @@
+<!--pages/coupon/coupon.wxml-->
+<view class="container">
+   <view class="card_box">
+     <image class="logo" src="{{logo}}"></image>
+     <view class="shop_name">{{shopName}}</view>
+     <view class="title">优惠券</view>
+     <view class="use_item">
+         <view class="item_tip">使用条件：</view>
+         <view class="item_content">消费满99.00减20.00元</view>
+     </view>
+     <view class="use_item">
+         <view class="item_tip">可用时间：</view>
+         <view class="item_content">2017-05-03至2017-12-13 00:00-23:59</view>
+     </view>
+     <view class="address border_bottom">
+          <view class="item_tip">地址：</view>
+          <view class="item_content ">深圳大运软件小镇</view>
+     </view>
+     <view class="use_item call">
+         <view class="item_tip">电话：</view>
+         <view class="item_content">15872756032</view>
+     </view>
+   </view>
+   <view class="get_cards">领取</view>
+</view>

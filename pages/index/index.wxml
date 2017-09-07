@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view bindtap="toShopMap">
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="shop_view border_bottom" wx:if="{{shopAddressControl==1?true:false}}">
+       <view>
+          <view class="shop_name">意点美味餐厅</view>
+          <view class="shop_address"><image class="address_icon" src="../img/home_address_icon.png"></image>银川市兴庆区意点美味餐厅</view>
+       </view>
+       <view class="text_right"><text></text></view>
+    </view>
+</view>
+<view class="cards_view border_top border_bottom">
+   <view class="item_card" wx:for="{{cards}}" bindtap="toCards"><image src="{{item.img}}"></image></view>
+</view>
+
+<view class="recommend_view">
+    <view class="recommend_nav border_top">
+       <view class="nav_item {{item.active?'nav_border':''}}" data-idx="{{index}}" bindtap="changeNav" wx:for="{{navList}}">{{item.text}}</view>
+    </view>
+    <view class="dish_list">
+       <view class="dish_item" wx:for="{{dishList}}">
+          <image src="{{item.img}}">{{item.img}}</image>
+          <view class="img_title">{{item.title}}</view>
+       </view>
+    </view>
+</view>

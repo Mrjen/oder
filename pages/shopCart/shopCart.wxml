@@ -1,0 +1,38 @@
+<!--pages/shopCart/shopCart.wxml-->
+<view class="top_nav border_bottom">购物车</view>
+<block>
+  <view wx:if="{{opationBtn}}" class="edit_list" bindtap="opationBtn">编辑</view>
+  <view wx:else="" class="edit_list" bindtap="completeBtn">完成</view>
+</block>
+<!-- 操作 -->
+<view class="opations" wx:if="{{opationBox}}">
+   <view class="select_all"><radio value="{{item.name}}" color="#333" checked="{{item.checked}}"/>全选</view>
+   <view class="delete_btn">删除所选</view>
+</view>
+
+<!-- 商品列表 -->
+<view class="list_box">
+  <view class="shop_list" wx:for="{{list}}">
+     <view class="select_box"><radio value="{{item.name}}" color="#333" checked="{{item.checked}}"/></view>
+     <view class="shop_right">
+        <view class="shop_img">
+          <image src="{{item.img}}" mode="widthFix"></image>
+        </view>
+        <view class="info_box">
+           <view class="info_left">
+               <view class="title">{{item.title}}</view>
+               <view class="price">￥{{item.price}}</view>
+           </view>
+           <view class="info_right">
+                <view bindtap="cutShop" data-idx="{{index}}" data-price="{{item.price}}" data-count="{{item.price}}">-</view>
+                <input value="{{item.count}}" disable="true" type="number"/>
+                <view bindtap="addShop" data-idx="{{index}}"  data-price="{{item.price}}" data-count="{{item.price}}">+</view>
+           </view>
+        </view>
+     </view>
+  </view>
+  <view class="shop_cart border_top">
+     <view class="select_all"><radio value="{{item.name}}" color="#333" checked="{{item.checked}}"/>全选</view>
+     <view class="settlement">合计：{{allMoney}}<text>结算({{shopCount}})</text></view>
+  </view>
+</view>

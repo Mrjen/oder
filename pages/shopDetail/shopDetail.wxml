@@ -1,0 +1,41 @@
+<!--pages/shopDetail/shopDetail.wxml-->
+<view class="container">
+   <view class="list_item">
+     <view class="item_in">
+       <image src="../img/shop_detail_home.png"></image>
+       意点美味餐厅
+     </view>
+       <text></text>
+    </view>
+    <view class="list_item">
+      <view class="item_in">
+        <image src="../img/shop_detail_tell.png"></image>
+        13888888888
+      </view>
+        <text class="call_shop" bindtap="callShop">拨打电话</text>
+     </view>
+     <view class="list_item">
+       <view class="item_in">
+         <image src="../img/shop_detail_wechat.png"></image>
+         超能者科技
+       </view>
+         <text></text>
+      </view>
+      <view class="list_item">
+        <view class="item_in">
+          <image src="../img/shop_detail_hot.png"></image>
+          本餐厅已接待888位顾客，平均消费88元
+        </view>
+          <text></text>
+       </view>
+       <view class="list_item">
+         <view class="item_in">
+           <image src="../img/shop_detail_hert.png"></image>
+           深圳大运软件小镇
+         </view>
+           <text></text>
+        </view>
+</view>
+
+<image class="map" src="../img/map.png" bindtap="toMap"></image>
+<view class="work_time"><image src="../img/shop_detail_clock.png"></image>工作日9:00  节假日10:00-22:00</view>

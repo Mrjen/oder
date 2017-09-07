@@ -1,0 +1,17 @@
+<!--pages/myCoupon/myCoupon.wxml-->
+<view class="top_nav border_bottom">
+   <view wx:for="{{topNav}}" bindtap="changeNav" data-idx="{{index}}" class="nav_item {{item.active?'nav_active':''}}">{{item.text}}</view>
+</view>
+
+<view class="cards">
+   <view class="cards_item" wx:for="{{list}}">
+     <view class="card_content">
+         <view class="card_left"><text>￥</text>{{item.price}}</view>
+         <view class="card_right">
+             <view>优惠券</view>
+             <view class="use_term">{{item.use_term}}</view>
+             <view class="use_date">{{item.use_date}}</view>
+         </view>
+     </view>
+   </view>
+</view>

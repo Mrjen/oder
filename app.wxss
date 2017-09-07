@@ -1,0 +1,30 @@
+/**app.wxss**/
+view{
+	box-sizing: border-box;
+	font-size: 30rpx;
+  line-height: 1;
+}
+
+.border_bottom:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	transform: scaleY(.5);
+	transform-origin: 0 0;
+	display: block;
+}
+
+.border_top:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	border-top: 1px solid #ddd;
+	transform: scaleY(.5);
+	transform-origin: 0 0;
+	display: block;
+}

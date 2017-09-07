@@ -1,0 +1,41 @@
+{
+  "pages":[
+		
+		"pages/index/index",
+		"pages/shopDetail/shopDetail",
+		"pages/Order/Order",
+		"pages/Notice/Notice",
+		"pages/coupon/coupon",
+		"pages/onlineOrder/onlineOrder",
+		"pages/shopCart/shopCart",
+		"pages/OrderList/OrderList",
+		"pages/Mine/Mine",
+    "pages/myCoupon/myCoupon",
+    "pages/orderReserve/orderReserve"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "点餐",
+    "navigationBarTextStyle":"black"
+  },
+	"tabBar": {
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "pages/img/nav_icon_home.png",
+				"selectedIconPath": "pages/img/nav_icon_home_active.png"
+			},{
+				"pagePath": "pages/Order/Order",
+				"text": "点餐",
+				"iconPath": "pages/img/nav_icon_order.png",
+				"selectedIconPath": "pages/img/nav_icon_order_active.png"
+			},{
+			"pagePath": "pages/Mine/Mine",
+			"text": "我的",
+			"iconPath": "pages/img/nav_icon_mine.png",
+			"selectedIconPath": "pages/img/nav_icon_mine_active.png"
+		}]
+	}
+}
